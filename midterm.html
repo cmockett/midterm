@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Music Quiz</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="midterm.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<body class="body-class" ng-controller="myController">
+	<h2>Music Scale Quiz!</h2>
+	<h4>Select a Key and a Scale, and select the correct notes to win!</h4>
+	<select name="Key">
+		<option value="">Key</option>
+		<option value="A">A</option>
+		<option value="A#/Bb">A#/Bb</option>
+		<option value="B">B</option>
+		<option value="C">C</option>
+		<option value="C#/Db">C#/Db</option>
+		<option value="D">D</option>
+		<option value="D#/Eb">D#/Eb</option>
+		<option value="E">E</option>
+		<option value="F">F</option>
+		<option value="F#/Gb">F#/Gb</option>
+		<option value="G">G</option>
+		<option value="G#/Ab">G#/Ab</option>
+	</select><br>
+	<select name="Scale">
+		<option value="">Scale</option>
+		<option value="Ionian">Ionian (Major)</option>
+		<option value="Dorian">Dorian</option>
+		<option value="Phrygian">Phrygian</option>
+		<option value="Lydian">Lydian</option>
+		<option value="Mixolydian">Mixolydian</option>
+		<option value="Aeolian">Aeolian (Minor)</option>
+		<option value="Locrian">Locrian</option>
+		<option value="Half-Whole Diminished">Half-Whole Diminished</option>
+		<option value="Whole-Half Diminished">Whole-Half Diminished</option>
+		<option value="Harmonic Minor">Harmonic Minor</option>
+		<option value="Melodic Minor">Melodic Minor</option>
+	</select>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="aButtonClick()">  A  </button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="bbButtonClick()">A#/Bb</button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="bButtonClick()">  B  </button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="cButtonClick()">  C  </button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="dbButtonClick()">C#/Db</button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="dButtonClick()">  D  </button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="ebButtonClick()">D#/Eb</button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="eButtonClick()">  E  </button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="fButtonClick()">  F  </button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="gbButtonClick()">F#/Gb</button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="gButtonClick()">  G  </button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="abButtonClick()">G#/Ab</button>
+			</div>
+			<div class="col-xs-4 col-sm-2">
+				<button type="button" class="btn btn-block btn-default" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="submitButtonClick()">Submit!</button>
+			</div>
+		</div>
+	</div>
+
+	<script language="javascript" type="text/javascript" src="midterm.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>
