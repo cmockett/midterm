@@ -179,60 +179,21 @@ var musicApp = function($scope){
 
 	
 	$scope.setKeyScale = function(){
-		// $scope.compareArray.push($scope.selectKeys)
-				// for(var i =0; i < $scope.selectScale.length; i++){
-		// 	for(var j=$scope.selectKeys; j < $scope.keysArray.length; j+[i]){
-		// 		$scope.compareArray.push(j)
-		// 	}
-		// }
-			// for(var i = 0; i<$scope.selectScale.length; i+=$scope.selectScale[i]){
-			// }
-			
 			$scope.keyIndex
 			for(var i=0; i<($scope.keysArray.length/2); i++){
 				if($scope.keysArray[i].key === $scope.selectKeys){
 					$scope.keyIndex = i
 				}
 			}
-			// for(var j = $scope.keyIndex; j<$scope.keysArray.length; j+= $scope.selectScale[j]){
-			// 		console.log("hi!")
-			// 		$scope.compareArray.push($scope.keysArray[j].key)
-
-			// }
-
-
-			
 			var position = $scope.keyIndex
 			for ( var i = 0; i < $scope.scalesArray[$scope.selectScale].scalePattern.length; i++ ) {
 				$scope.compareArray.push($scope.keysArray[position])
 				position += $scope.scalesArray[$scope.selectScale].scalePattern[i]
-
 			}
-
-			// function printObject(o) {
-			// 	  var out = '';
-			// 	  for (var p in o) {
-			// 	    out += o[p] 
-			// 	  }
-			// 	  return out;
-			// 	}
-
-			// var notes = $scope.compareArray.filter(function printObject(o) {
-			// 	  var out = '';
-			// 	  for (var p in o) {
-			// 	    out += o[p] 
-			// 	  }
-			// 	  return out;
-			// 	})
-			
-			 $scope.compareArray.filter(function(el){
+			$scope.compareArray.filter(function(el){
 				notes.push(el.key);
 			})
-
-			// console.log($scope.compareArray)
 			console.log(notes)
-		// console.log($scope.selectKeys)
-		// console.log($scope.compareArray)
 	}
 	var notes = []
 	$scope.submitButtonClick = function(){
