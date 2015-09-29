@@ -6,52 +6,135 @@ var musicApp = function($scope){
 
 
 	$scope.aButtonClick = function(){
-		$scope.notesArray.push("A")
+		var x
+		if($scope.notesArray.indexOf("A") === -1){
+			$scope.notesArray.push("A")
+		}
+		else if($scope.notesArray.indexOf("A") >=0){
+			x = $scope.notesArray.indexOf("A")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.bbButtonClick = function(){
-		$scope.notesArray.push("A#/Bb")
+		var x
+		if($scope.notesArray.indexOf("A#/Bb") === -1){
+			$scope.notesArray.push("A#/Bb")
+		}
+		else if($scope.notesArray.indexOf("A#/Bb") >=0){
+			x = $scope.notesArray.indexOf("A#/Bb")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.bButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("B") === -1){
 		$scope.notesArray.push("B")
+		}
+		else if($scope.notesArray.indexOf("B") >=0){
+			x = $scope.notesArray.indexOf("B")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.cButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("C") === -1){
 		$scope.notesArray.push("C")
+		}
+		else if($scope.notesArray.indexOf("C") >=0){
+			x = $scope.notesArray.indexOf("C")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.dbButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("C#/Db") === -1){
 		$scope.notesArray.push("C#/Db")
+		}
+		else if($scope.notesArray.indexOf("C#/Db") >=0){
+			x = $scope.notesArray.indexOf("C#/Db")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.dButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("D") === -1){
 		$scope.notesArray.push("D")
+		}
+		else if($scope.notesArray.indexOf("D") >=0){
+			x = $scope.notesArray.indexOf("D")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.ebButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("D#/Eb") === -1){
 		$scope.notesArray.push("D#/Eb")
+		}
+		else if($scope.notesArray.indexOf("D#/Eb") >=0){
+			x = $scope.notesArray.indexOf("D#/Eb")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.eButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("E") === -1){
 		$scope.notesArray.push("E")
+		}
+		else if($scope.notesArray.indexOf("E") >=0){
+			x = $scope.notesArray.indexOf("E")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.fButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("F") === -1){
 		$scope.notesArray.push("F")
+		}
+		else if($scope.notesArray.indexOf("F") >=0){
+			x = $scope.notesArray.indexOf("F")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.gbButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("F#/Gb") === -1){
 		$scope.notesArray.push("F#/Gb")
+		}
+		else if($scope.notesArray.indexOf("F#/Gb") >=0){
+			x = $scope.notesArray.indexOf("F#/Gb")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.gButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("G") === -1){
 		$scope.notesArray.push("G")
+		}
+		else if($scope.notesArray.indexOf("G") >=0){
+			x = $scope.notesArray.indexOf("G")
+			$scope.notesArray.splice(x,1)
+		}
 		console.log($scope.notesArray)
 	}
 	$scope.abButtonClick = function(){
+		var x
+		if($scope.notesArray.indexOf("G#/Ab") === -1){
 		$scope.notesArray.push("G#/Ab")
-		console.log($scope.notesArray)
+		}
+		else if($scope.notesArray.indexOf("G#/Ab") >=0){
+			x = $scope.notesArray.indexOf("G#/Ab")
+			$scope.notesArray.splice(x,1)
+		}		console.log($scope.notesArray)
 	}
 
 
@@ -197,7 +280,7 @@ var musicApp = function($scope){
 	}
 	var notes = []
 	$scope.submitButtonClick = function(){
-		if($scope.notesArray.join() === notes.join()){
+		if($scope.notesArray.sort().join() === notes.sort().join()){
 			alert("Correct!")
 		}
 		else{
