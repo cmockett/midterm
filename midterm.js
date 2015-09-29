@@ -265,7 +265,6 @@ var musicApp = function($scope){
 			$scope.keyIndex
 			$scope.compareArray.length = 0
 			notes.length = 0
-			$scope.notesArray.length = 0
 
 			for(var i=0; i<($scope.keysArray.length/2); i++){
 				if($scope.keysArray[i].key === $scope.selectKeys){
@@ -282,9 +281,11 @@ var musicApp = function($scope){
 			})
 			console.log(notes)
 	}
+	$scope.points=0
 	var notes = []
 	$scope.submitButtonClick = function(){
 		if($scope.notesArray.sort().join() === notes.sort().join()){
+			$scope.points++
 			alert("Correct!")
 		}
 		else{
@@ -292,23 +293,6 @@ var musicApp = function($scope){
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 angular.module("myApp").controller("myController", ["$scope", musicApp])

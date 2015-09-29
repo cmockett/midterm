@@ -8,7 +8,6 @@
 </head>
 <body class="body-class" ng-controller="myController">
 	<h2>Music Scale Quiz!</h2>
-	<h1>{{selectkeys}}</h1>
 	<h4>Select a Key and a Scale, and select the correct notes to win!</h4>
 	Key:<select ng-model="selectKeys" name="Key">
 		<option value="{{key.key}}" ng-repeat="key in keysArray | limitTo: 12">{{key.key}}</option>
@@ -19,7 +18,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-xs-4 col-sm-2">
-				<button class="btn btn-primary" type="button" ng-click="setKeyScale()">Set Key/Scale</button>
+				<button class="btn btn-default btn-block" type="button" ng-click="setKeyScale()">Set Key/Scale</button>
 			</div>
 		</div>
 		<div class="row">
@@ -72,10 +71,11 @@
 				<button type="button" onclick="document.getElementById('abNote').play();" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="abButtonClick()">G#/Ab</button>
 			</div>
 			<div class="col-xs-4 col-sm-2">
-				<button type="button" class="btn btn-block btn-default" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="submitButtonClick()">Submit!</button>
+				<button type="button" class="btn btn-block btn-default" ng-click="submitButtonClick()">Submit!</button>
 			</div>
 		</div>
 	</div>
+	<h2>Score:  {{points}}</h2>
 
 	<script language="javascript" type="text/javascript" src="midterm.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
