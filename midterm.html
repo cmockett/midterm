@@ -11,13 +11,17 @@
 	<h1>{{selectkeys}}</h1>
 	<h4>Select a Key and a Scale, and select the correct notes to win!</h4>
 	Key:<select ng-model="selectKeys" name="Key">
-		<option value="{{key.key}}" ng-repeat="key in keysArray">{{key.key}}</option>
+		<option value="{{key.key}}" ng-repeat="key in keysArray | limitTo: 12">{{key.key}}</option>
 	</select><br>
 	Scale:<select ng-model="selectScale" name="Scale">
 		<option value="{{$index}}" ng-repeat="scale in scalesArray">{{scale.scaleName}}</option>
 	</select>
-	<button class="btn btn-primary" type="button" ng-click="setKeyScale()">Set Key/Scale</button>
 	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-4 col-sm-2">
+				<button class="btn btn-primary" type="button" ng-click="setKeyScale()">Set Key/Scale</button>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-xs-4 col-sm-2">
 				<audio id="aNote" src="39197__jobro__piano-ff-049.wav" preload="auto"></audio>

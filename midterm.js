@@ -263,6 +263,10 @@ var musicApp = function($scope){
 	
 	$scope.setKeyScale = function(){
 			$scope.keyIndex
+			$scope.compareArray.length = 0
+			notes.length = 0
+			$scope.notesArray.length = 0
+
 			for(var i=0; i<($scope.keysArray.length/2); i++){
 				if($scope.keysArray[i].key === $scope.selectKeys){
 					$scope.keyIndex = i
