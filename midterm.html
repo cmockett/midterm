@@ -27,7 +27,7 @@
 		<option value="G#/Ab">G#/Ab</option> -->
 	</select><br>
 	Scale:<select ng-model="selectScale" name="Scale">
-		<option value="{{scale.scalePattern}}" ng-repeat="scale in scalesArray">{{scale.scale}}</option>
+		<option value="{{$index}}" ng-repeat="scale in scalesArray">{{scale.scaleName}}</option>
 		<!-- <option value="Ionian">Ionian (Major)</option>
 		<option value="Dorian">Dorian</option>
 		<option value="Phrygian">Phrygian</option>
