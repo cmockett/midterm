@@ -7,18 +7,21 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </head>
 <body class="body-class" ng-controller="myController">
-	<h2>Music Scale Quiz!</h2>
-	<h4>Select a Key and a Scale, and select the correct notes to win!</h4>
-	Key:<select ng-model="selectKeys" name="Key">
-		<option value="{{key.key}}" ng-repeat="key in keysArray | limitTo: 12">{{key.key}}</option>
-	</select><br>
-	Scale:<select ng-model="selectScale" name="Scale">
-		<option value="{{$index}}" ng-repeat="scale in scalesArray">{{scale.scaleName}}</option>
-	</select>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xs-4 col-sm-2">
-				<button class="btn btn-default btn-block" type="button" ng-click="setKeyScale()">Set Key/Scale</button>
+			<div class="jumbotron">
+				<h2>Music Scale Quiz!</h2>
+				<h4>Select a Key and a Scale, and select the correct notes to win!</h4>
+				Key:<select ng-model="selectKeys" name="Key">
+					<option value="{{key.key}}" ng-repeat="key in keysArray | limitTo: 12">{{key.key}}</option>
+				</select>
+				Scale:<select ng-model="selectScale" name="Scale">
+					<option value="{{$index}}" ng-repeat="scale in scalesArray">{{scale.scaleName}}</option>
+				</select>
+				<!-- <div class="row"> -->
+					<div class="col-xs-4 col-sm-3">
+						<button class="btn btn-default btn-block" type="button" ng-click="setKeyScale()">Set Key/Scale</button>
+					</div>
 			</div>
 		</div>
 		<div class="row">
@@ -74,8 +77,8 @@
 				<button type="button" class="btn btn-block btn-default" ng-click="submitButtonClick()">Submit!</button>
 			</div>
 		</div>
+		<h2>Score:  {{points}}</h2>
 	</div>
-	<h2>Score:  {{points}}</h2>
 
 	<script language="javascript" type="text/javascript" src="midterm.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
