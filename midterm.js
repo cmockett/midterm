@@ -259,7 +259,15 @@ var musicApp = function($scope){
 		scalePattern: [2,1,2,2,2,2,1]
 	}
 	]
-
+	// $scope.loopage = false
+	$scope.loopButton = function(){
+		if($scope.loopage !== "loop"){
+			$scope.loopage = "loop"
+	}
+		else{
+			$scope.loopage = undefined
+		}
+	}
 	
 	$scope.setKeyScale = function(){
 			$scope.keyIndex
