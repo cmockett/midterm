@@ -76,10 +76,17 @@
 				<button type="button" onclick="document.getElementById('abNote').play();" class="btn btn-block btn-primary" data-toggle="button" aria-pressed="false" autocomplete="false" ng-click="abButtonClick()">G#/Ab</button>
 			</div>
 			<div class="col-xs-4 col-sm-2" style="margin-top:40px">
-				<button type="button" class="btn btn-block btn-default btn-lg" ng-click="submitButtonClick()">Submit!</button>
+				<button type="button" class="btn btn-block btn-default btn-lg" ng-click="submitButtonClick()" data-toggle="modal" data-target=".bs-example-modal-sm">Submit!</button>
+				<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  					<div class="modal-dialog modal-sm">
+    					<div class="modal-content">
+    					<h4 class="text-center">{{winOrLose}}</h4>
+    					</div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<h2>Score:  {{points}}</h2>
+		<h2 class="tab">Score:  {{points}}</h2>
 	</div>
 
 	<script language="javascript" type="text/javascript" src="midterm.js"></script>

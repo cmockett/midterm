@@ -284,12 +284,15 @@ var musicApp = function($scope){
 	$scope.points=0
 	var notes = []
 	$scope.submitButtonClick = function(){
-		if($scope.notesArray.sort().join() === notes.sort().join()){
+		if(notes.length === 0){
+			$scope.winOrLose = "Set Key and Scale"
+		}
+		else if($scope.notesArray.sort().join() === notes.sort().join()){
 			$scope.points++
-			alert("Correct!")
+			$scope.winOrLose = "Correct!"
 		}
 		else{
-			alert("Try Again!")
+			$scope.winOrLose = "Try Again!"
 		}
 	}
 }
