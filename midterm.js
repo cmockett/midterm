@@ -14,7 +14,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("A")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.bbButtonClick = function(){
 		var x
@@ -25,7 +25,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("A#/Bb")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.bButtonClick = function(){
 		var x
@@ -36,7 +36,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("B")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.cButtonClick = function(){
 		var x
@@ -47,7 +47,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("C")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.dbButtonClick = function(){
 		var x
@@ -58,7 +58,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("C#/Db")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.dButtonClick = function(){
 		var x
@@ -69,7 +69,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("D")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.ebButtonClick = function(){
 		var x
@@ -80,7 +80,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("D#/Eb")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.eButtonClick = function(){
 		var x
@@ -91,7 +91,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("E")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.fButtonClick = function(){
 		var x
@@ -102,7 +102,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("F")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.gbButtonClick = function(){
 		var x
@@ -113,7 +113,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("F#/Gb")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.gButtonClick = function(){
 		var x
@@ -124,7 +124,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("G")
 			$scope.notesArray.splice(x,1)
 		}
-		// console.log($scope.notesArray)
+		console.log($scope.notesArray)
 	}
 	$scope.abButtonClick = function(){
 		var x
@@ -135,7 +135,7 @@ var musicApp = function($scope){
 			x = $scope.notesArray.indexOf("G#/Ab")
 			$scope.notesArray.splice(x,1)
 		}	
-			// console.log($scope.notesArray)
+			console.log($scope.notesArray)
 	}
 
 
@@ -260,7 +260,6 @@ var musicApp = function($scope){
 		scalePattern: [2,1,2,2,2,2,1]
 	}
 	]
-	// $scope.loopage = false
 	$scope.loopButton = function(){
 		if($scope.loopage !== "loop"){
 			$scope.loopage = "loop"
@@ -288,7 +287,7 @@ var musicApp = function($scope){
 			$scope.compareArray.filter(function(el){
 				notes.push(el.key);
 			})
-			// console.log(notes)
+			console.log(notes)
 	}
 	$scope.points=0
 	var notes = []
